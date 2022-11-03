@@ -77,6 +77,9 @@ console.log(
   driversArr.map(({ name }) => name)
 );
 // 4. i nauja masyva atrinkti susituokusiu zmoniu vardus
+// filter => map
+const marriedNamesArr = people.filter(({ married }) => married).map(({ name }) => name);
+console.log('marriedNamesArr ===', marriedNamesArr);
 
 // 5. i nauja masyva atrinkti vairuojanciu zmoniu lytis.
 

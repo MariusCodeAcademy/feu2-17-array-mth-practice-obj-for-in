@@ -34,10 +34,24 @@ console.log('numbers ===', numbers);
 const numsOnly = nums2.filter((sk) => typeof sk === 'number');
 console.log('numsOnly ===', numsOnly);
 let total = 0;
+
 numsOnly.forEach((sk) => {
   total += sk;
 });
+
 console.log('total ===', total);
 const avg = total / numsOnly.length;
 console.log('avg ===', avg);
+
+// vienu forEach kartu
+total = 0;
+let skaiciai = 0;
+nums2.forEach((el) => {
+  if (typeof el === 'number') {
+    total += el;
+    skaiciai++;
+  }
+});
+const avgOneForEach = total / skaiciai;
+console.log('avgOneForEach ===', avgOneForEach);
 // 7. patiktinti ar nums2 masyve yra elementu kurie butu ne skaiciau ir ne string tipo.
