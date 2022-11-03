@@ -7,6 +7,7 @@ let people = [
     income: 1200,
     married: false,
     hasCar: false,
+    id: 'p_01',
   },
   {
     name: 'Severija',
@@ -16,6 +17,7 @@ let people = [
     income: 1300,
     married: false,
     hasCar: true,
+    id: 'p_02',
   },
   {
     name: 'Valdas',
@@ -25,6 +27,7 @@ let people = [
     income: 0,
     married: false,
     hasCar: false,
+    id: 'p_03',
   },
   {
     name: 'Virginijus',
@@ -34,6 +37,7 @@ let people = [
     income: 2400,
     married: true,
     hasCar: true,
+    id: 'p_04',
   },
   {
     name: 'Samanta',
@@ -43,6 +47,7 @@ let people = [
     income: 1200,
     married: true,
     hasCar: true,
+    id: 'p_05',
   },
   {
     name: 'Janina',
@@ -52,6 +57,7 @@ let people = [
     income: 364,
     married: false,
     hasCar: false,
+    id: 'p_06',
   },
 ];
 
@@ -86,9 +92,25 @@ console.log('marriedNamesArr ===', marriedNamesArr);
 // 6. su funkcija grazinti objekta kuriame butu fairuojanciu vyru ir moteru kiekiai
 // pvz {vyrai: 4, moterys: 3}
 
+function getMalesFemales() {
+  const rez = {
+    vyrai: people.filter((pObj) => pObj.sex === 'male').length,
+    moterys: people.filter((pObj) => pObj.sex === 'female').length,
+  };
+  return rez;
+}
+console.log('getMalesFemales() ===', getMalesFemales());
+
 // 7. grazinti nauja masyva kuriame butu tik lytis ir pajamos. Tada suskaiciuoti vidurki pagal lyti.
 
 // 8. grazinti nauja masyva pridedant prie kiekvieno objekto id savybe kuri bus didejanti nuo p_01
+const peopleWithId = people.map((pObj, i) => {
+  const localCopyPObj = { ...pObj };
+  localCopyPObj.id = 'p_' + (i + 1).toString().padStart(2, '0');
+  return localCopyPObj;
+});
+
+// console.log('peopleWithId ===', peopleWithId);
 // 8.1 persikopijuoti kad orginalas butu su id reiksmem
 
 // 9. sukurti funkcija kuri gaudama id istrina ta masyvo elementa. deletPerson(p_02)
