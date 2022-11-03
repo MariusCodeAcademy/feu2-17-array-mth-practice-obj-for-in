@@ -61,6 +61,17 @@ let people = [
   },
 ];
 
+const mainObj = {
+  nums: [1, 2, 5],
+  avg: function () {
+    console.log(this.nums);
+  },
+};
+mainObj.avg();
+
+// taikomes
+const pplContainer = document.getElementById('people-container');
+
 // darydami uzduotis nekeiciame orginalo iskyrus 8-9 uzduotis
 
 // 1. atspausdinti visus vyrus
@@ -126,7 +137,35 @@ const peopleWithId = people.map((pObj, i) => {
 `;
 // jei vaiduorja masinos ikona zalia, jei ne raudona
 
+function makePerson({ name, surname, sex, age, income, hasCar, id }) {
+  const articleEl = document.createElement('article');
+  articleEl.className = 'card';
+  articleEl.dataset.pId = id;
+  articleEl.innerHTML = `
+  <h3>${name} ${surname}</h3>
+  <h4>${age} metu ${sex === 'male' ? 'vyras' : 'moteris'}</h4>
+  <p>atlyginimas: ${income} eur</p>
+  <p class="driver-icon ${
+    hasCar ? 'driver' : ''
+  }"><i class="fa fa-car fa-3x" aria-hidden="true"></i></p>
+  <button id="delete">delete</button>
+  `;
+  // nusitaikyti ir uzdeti event listeneri mygtukui
+  return articleEl;
+}
+// console.log('makePerson(people[0]) ===', makePerson(people[0]));
 // 11. sukurti funkcija renderList(data) kuri is dataArr sugeneruoja elementus su 10pratimo funkcija ir patalpina juos i `<div id="people-container" class="people-container">`
+
+function renderList(arr, dest) {
+  //
+  const htmlElsFromArr = arr.map(makePerson);
+  console.log('htmlElsFromArr ===', htmlElsFromArr);
+  dest.innerHTML = '';
+  htmlElsFromArr.forEach((el) => dest.append(el));
+  // [el, el, el] => ...htmlElsFromArr => el, el, el
+  // dest.append(...htmlElsFromArr);
+}
+renderList(people, pplContainer);
 
 // 12. su 11to pratimo funkcija rikiuojam ir atrenkam elementus i sarasa mygtuku paspaudimais.
 `
