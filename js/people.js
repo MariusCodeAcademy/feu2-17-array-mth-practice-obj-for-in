@@ -55,6 +55,8 @@ let people = [
   },
 ];
 
+// darydami uzduotis nekeiciame orginalo iskyrus 8 uzduoti
+
 // 1. atspausdinti visus vyrus
 
 // 2. konsoleje atspausdinti visas moteris jaunesnes nei 35 metai
@@ -68,4 +70,9 @@ let people = [
 // 6. su funkcija grazinti objekta kuriame butu fairuojanciu vyru ir moteru kiekiai
 // pvz {vyrai: 4, moterys: 3}
 
-//
+// 7. grazinti nauja masyva kuriame butu tik lytis ir pajamos. Tada suskaiciuoti vidurki pagal lyti.
+
+// 8. grazinti nauja masyva pridedant prie kiekvieno objekto id savybe kuri bus didejanti nuo p_01
+// 8.1 persikopijuoti kad orginalas butu su id reiksmem
+
+// 9. sukurti funkcija kuri gaudama id istrina ta masyvo elementa. deletPerson(p_02)
