@@ -67,3 +67,5 @@ let people = [
 
 // 6. su funkcija grazinti objekta kuriame butu fairuojanciu vyru ir moteru kiekiai
 // pvz {vyrai: 4, moterys: 3}
+
+//

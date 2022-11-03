@@ -15,7 +15,11 @@ const nums2 = [2, 5, -10, 'one', true, 7, 'two', 1];
 //   {index: 1, reiksme: 2}
 //    ...
 // ]
-
+const arrayOfObjs = numbers.map((sk, idx) => {
+  const objFromSk = { index: idx, reiksme: sk };
+  return objFromSk;
+});
+console.log('arrayOfObjs ===', arrayOfObjs);
 // 4. grazinti nauja masyva su Suapvalintom reikšmem iki sveikų skaičių
 
 // 5. isrikiuoti numbers masyva nuo didziausio iki maziausio
