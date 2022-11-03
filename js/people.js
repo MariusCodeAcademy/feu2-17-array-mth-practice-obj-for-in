@@ -100,3 +100,13 @@ console.log(
 </article>
 `;
 // jei vaiduorja masinos ikona zalia, jei ne raudona
+
+// 11. sukurti funkcija renderList(data) kuri is dataArr sugeneruoja elementus su 10pratimo funkcija ir patalpina juos i `<div id="people-container" class="people-container">`
+
+// 12. su 11to pratimo funkcija rikiuojam ir atrenkam elementus i sarasa mygtuku paspaudimais.
+`
+  <button>Rodyti tik vyrus</button>
+  <button>Rodyti tik moteris</button>
+  <button>isrikiuoti pagal pajamas</button>
+  <button>isrikiuoti pagal amziu</button>
+`;
