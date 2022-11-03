@@ -27,7 +27,8 @@ console.log('arrayOfObjsOneLine ===', arrayOfObjsOneLine);
 // 4. grazinti nauja masyva su Suapvalintom reikšmem iki sveikų skaičių
 
 // 5. isrikiuoti numbers masyva nuo didziausio iki maziausio
-
+numbers.sort((a, b) => a - b);
+console.log('numbers ===', numbers);
 // 6. is nums2 masyvo atrinkti tik skaiciu masyva ir grazinti jo vidurki
 
 // 7. patiktinti ar nums2 masyve yra elementu kurie butu ne skaiciau ir ne string tipo.

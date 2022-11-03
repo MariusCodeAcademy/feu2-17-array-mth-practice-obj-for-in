@@ -55,7 +55,7 @@ let people = [
   },
 ];
 
-// darydami uzduotis nekeiciame orginalo iskyrus 8 uzduoti
+// darydami uzduotis nekeiciame orginalo iskyrus 8-9 uzduotis
 
 // 1. atspausdinti visus vyrus
 
@@ -76,3 +76,5 @@ let people = [
 // 8.1 persikopijuoti kad orginalas butu su id reiksmem
 
 // 9. sukurti funkcija kuri gaudama id istrina ta masyvo elementa. deletPerson(p_02)
+
+//
