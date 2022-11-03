@@ -58,11 +58,24 @@ let people = [
 // darydami uzduotis nekeiciame orginalo iskyrus 8-9 uzduotis
 
 // 1. atspausdinti visus vyrus
+people.forEach((pObj) => {
+  if (pObj.sex === 'male') {
+    // console.log(pObj);
+  }
+});
+//
+// people.filter((pObj) => pObj.sex === 'male').forEach((pObj) => console.log(pObj));
 
 // 2. konsoleje atspausdinti visas moteris jaunesnes nei 35 metai
 
 // 3. atrinkti i nauja masyva visus žmones kurie turi mašinas
+const driversArr = people.filter((pObj) => pObj.hasCar === true);
+// const driversArrK = people.filter(({ hasCar }) => hasCar);
 
+console.log(
+  'driversArr ===',
+  driversArr.map(({ name }) => name)
+);
 // 4. i nauja masyva atrinkti susituokusiu zmoniu vardus
 
 // 5. i nauja masyva atrinkti vairuojanciu zmoniu lytis.
