@@ -19,7 +19,10 @@ const arrayOfObjs = numbers.map((sk, idx) => {
   const objFromSk = { index: idx, reiksme: sk };
   return objFromSk;
 });
+
+const arrayOfObjsOneLine = numbers.map((sk, idx) => ({ index: idx, reiksme: sk }));
 console.log('arrayOfObjs ===', arrayOfObjs);
+console.log('arrayOfObjsOneLine ===', arrayOfObjsOneLine);
 // 4. grazinti nauja masyva su Suapvalintom reikšmem iki sveikų skaičių
 
 // 5. isrikiuoti numbers masyva nuo didziausio iki maziausio
