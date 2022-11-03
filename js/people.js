@@ -77,4 +77,13 @@ let people = [
 
 // 9. sukurti funkcija kuri gaudama id istrina ta masyvo elementa. deletPerson(p_02)
 
-//
+// 10. parasyti funkcija kuri sukuria ir grazina viena zmogaus kortele tokiu pavidalu
+`
+<article class="card">
+  <h3>Severija Piktutytė</h3>
+  <h4>26 metu moteris</h4>
+  <p>atlyginimas: 1300 eur</p>
+  <p class=""><i class="fa fa-car" aria-hidden="true"></i></p>
+</article>
+`;
+// jei vaiduorja masinos ikona zalia, jei ne raudona
