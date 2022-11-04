@@ -157,10 +157,12 @@ function makePerson({ name, surname, sex, age, income, hasCar, id }) {
   <p class="driver-icon ${
     hasCar ? 'driver' : ''
   }"><i class="fa fa-car fa-3x" aria-hidden="true"></i></p>
-  <button id="delete">delete</button>
   `;
-
-  articleEl.querySelector('#delete').addEventListener('click', () => deletePerson(id));
+  // <button id="delete">delete</button>
+  const buttonEl = document.createElement('button');
+  buttonEl.textContent = 'delete me';
+  articleEl.append(buttonEl);
+  buttonEl.addEventListener('click', () => deletePerson(id));
   // nusitaikyti ir uzdeti event listeneri mygtukui
   return articleEl;
 }
